@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 
-{% block title %}fkaskapp{% endblock %}
+{% block title %}مدونة{% endblock %}
 
 {% block body %}
-    <article class="jumbotron text-right col-sm-12 mx-auto">
-      <h1 class="">Blank Flask app</h2>
-      <div class="content">
-        this is a blank flask app
-      </div>
-    </article>
+  {% for post in posts %}
+  <article class="jumbotron text-right col-sm-12 mx-auto">
+    <h1 class="">{{ post.title }}</h2>
+    <div class="content">{{ post.content }}</div>
+  </article>
+  {% endfor %}
 {% endblock %}
