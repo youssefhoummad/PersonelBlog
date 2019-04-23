@@ -11,21 +11,21 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">مدونة</a>
-          <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
-          <!--  <span class="navbar-toggler-icon"></span>-->
-          <!--</button>-->
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="#">دخول</a>
-            </div>
-          </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+      <div class="container">
+        <a class="navbar-brand" href="#">مدونة</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav text-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">دخول</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <main role="main" class="container">
       <div class="row">
