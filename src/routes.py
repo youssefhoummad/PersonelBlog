@@ -11,7 +11,9 @@ from src.models import *
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template('index.html', posts=get_posts())
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.pub_date.desc()).paginate(page=page, per_page=5)
+    return render_template('index.html', posts=posts)
 
 
 @app.route("/login", methods=['GET', 'POST'])
