@@ -6,7 +6,9 @@
   {% for post in posts %}
   <article class="jumbotron text-right col-sm-12 mx-auto">
     <h1 class="">{{ post.title }}</h2>
-    <div class="content">{{ post.content }}</div>
+    <div class="content">
+      {{ post.content }}
+    </div>
   </article>
   {% endfor %}
 {% endblock %}
